@@ -1,0 +1,3 @@
+[submodule "objectionable-c/themes/theme"]
+	path = objectionable-c/themes/theme
+	url = https://github.com/hugo-sid/hugo-blog-awesome
