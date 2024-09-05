@@ -1,5 +1,4 @@
 ---
-title: Objectionable-C
 author: Tim Johnsen
 ---
 
