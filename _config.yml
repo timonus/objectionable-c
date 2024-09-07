@@ -8,9 +8,9 @@ title: Objectionable-C
 author: Tim Johnsen
 
 description: >
-    Musings on iOS development by Tim Johnsen.
+  Musings on iOS development by Tim Johnsen.
 
 social_links:
-    {platform: mastodon, user_url: "https://mastodon.social/@timonus"}
-    {platform: github, user_url: "https://github.com/timonus"}
-    {platform: stackoverflow, user_url: "https://stackoverflow.com/users/3943258"}
+  { platform: mastodon, user_url: "https://mastodon.social/@timonus" }
+  { platform: github, user_url: "https://github.com/timonus" }
+  { platform: stackoverflow, user_url: "https://stackoverflow.com/users/3943258" }
