@@ -1,8 +1,18 @@
+# https://github.com/jekyll/minima/blob/master/_config.yml
+
 remote_theme: jekyll/minima
 plugins:
   - jekyll-remote-theme
 minima:
-  skin: auto
+  skin: solarized
   
 title: Objectionable-C
 author: Tim Johnsen
+
+description: >
+    Musings on iOS development by Tim Johnsen.
+
+social_links:
+    {platform: mastodon, user_url: "https://mastodon.social/@timonus"}
+    {platform: github, user_url: "https://github.com/timonus"}
+    {platform: stackoverflow, user_url: "https://stackoverflow.com/users/3943258"}
