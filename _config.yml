@@ -10,6 +10,6 @@ author: Tim Johnsen
 # description: >
 #   Musings on iOS development by Tim Johnsen.
 
-social_links:
-  { platform: github, user_url: "https://github.com/timonus" }
-  { platform: stackoverflow, user_url: "https://stackoverflow.com/users/3943258" }
+# social_links:
+#   { platform: github, user_url: "https://github.com/timonus" }
+#   { platform: stackoverflow, user_url: "https://stackoverflow.com/users/3943258" }
