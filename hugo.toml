@@ -25,3 +25,15 @@ theme = 'theme'
     name = "About"
     url = "/about/"
     weight = 2
+
+[[params.socialIcons]]
+name = "mastodon"
+url = "https://mastodon.social/@timonus"
+
+[[params.socialIcons]]
+name = "github"
+url = "https://github.com/timonus"
+
+[[params.socialIcons]]
+name = "rss"
+url = "/index.xml"
