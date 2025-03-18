@@ -3,47 +3,95 @@
 <meta http-equiv="content-type" content="text/html">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title itemprop="name">404 Page not found | Objectionable-C</title>
-<meta property="og:title" content="404 Page not found | Objectionable-C" />
-<meta name="twitter:title" content="404 Page not found | Objectionable-C" />
-<meta itemprop="name" content="404 Page not found | Objectionable-C" />
-<meta name="application-name" content="404 Page not found | Objectionable-C" />
+<title itemprop="name">Wielding Brotli on iOS | Objectionable-C</title>
+<meta property="og:title" content="Wielding Brotli on iOS | Objectionable-C" />
+<meta name="twitter:title" content="Wielding Brotli on iOS | Objectionable-C" />
+<meta itemprop="name" content="Wielding Brotli on iOS | Objectionable-C" />
+<meta name="application-name" content="Wielding Brotli on iOS | Objectionable-C" />
 <meta property="og:site_name" content="" />
 
-<meta name="description" content="">
-<meta itemprop="description" content="" />
-<meta property="og:description" content="" />
-<meta name="twitter:description" content="" />
+<meta name="description" content="Make your app smaller by compressing bundled assets">
+<meta itemprop="description" content="Make your app smaller by compressing bundled assets" />
+<meta property="og:description" content="Make your app smaller by compressing bundled assets" />
+<meta name="twitter:description" content="Make your app smaller by compressing bundled assets" />
 
 <meta property="og:locale" content="en-us" />
 <meta name="language" content="en-us" />
 
-  <link rel="alternate" hreflang="en" href="https://example.org/404.html" title="" />
+  <link rel="alternate" hreflang="en" href="https://example.org/posts/brotli-ios/" title="" />
 
 
 
 
+
+    
+    
+    
+
+    <meta property="og:type" content="article" />
+    <meta property="og:article:published_time" content=2025-03-18T05:00:00-0700 />
+    <meta property="article:published_time" content=2025-03-18T05:00:00-0700 />
+    <meta property="og:url" content="https://example.org/posts/brotli-ios/" />
+
+    
+    <meta property="og:article:author" content="Tim Johnsen" />
+    <meta property="article:author" content="Tim Johnsen" />
+    <meta name="author" content="Tim Johnsen" />
+    
+    
+
+    
+
+    <script defer type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "Article",
+        "headline": "Wielding Brotli on iOS",
+        "author": {
+        "@type": "Person",
+        "name": ""
+        },
+        "datePublished": "2025-03-18",
+        "description": "Make your app smaller by compressing bundled assets",
+        "wordCount":  324 ,
+        "mainEntityOfPage": "True",
+        "dateModified": "2025-03-18",
+        "image": {
+        "@type": "imageObject",
+        "url": ""
+        },
+        "publisher": {
+        "@type": "Organization",
+        "name": "Objectionable-C"
+        }
+    }
+    </script>
 
 
 <meta name="generator" content="Hugo 0.143.1">
 
     
-    <meta property="og:url" content="https://example.org/404.html">
+    <meta property="og:url" content="https://example.org/posts/brotli-ios/">
   <meta property="og:site_name" content="Objectionable-C">
-  <meta property="og:title" content="404 Page not found">
+  <meta property="og:title" content="Wielding Brotli on iOS">
+  <meta property="og:description" content="Make your app smaller by compressing bundled assets">
   <meta property="og:locale" content="en_us">
-  <meta property="og:type" content="website">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-03-18T05:00:00-07:00">
+    <meta property="article:modified_time" content="2025-03-18T05:00:00-07:00">
 
 
     
     
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="404 Page not found">
+  <meta name="twitter:title" content="Wielding Brotli on iOS">
+  <meta name="twitter:description" content="Make your app smaller by compressing bundled assets">
 
 
     
 
-    <link rel="canonical" href="https://example.org/404.html">
+    <link rel="canonical" href="https://example.org/posts/brotli-ios/">
     <link href="/style.min.e390ba7da26222f4dc42a349955d76dbbe44e5ce2535a43de5a70633a0a9ec3c.css" rel="stylesheet">
     <link href="/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
 
@@ -126,11 +174,44 @@ stroke-linejoin="round" class="feather feather-home">
     </nav>
 </div>
 
-<div class="wrapper">
-    <main class="main-404" aria-label="Content">
-        <h1></h1>
-        <p></p>
-    </main>
+<div class="wrapper post">
+    <main class="page-content" aria-label="Content">
+        <article>
+            <header class="header">
+                <h1 class="header-title">Wielding Brotli on iOS</h1>
+                
+                
+                
+                <div class="post-meta">
+                    <time datetime="2025-03-18T05:00:00-07:00" itemprop="datePublished"> Mar 18, 2025 </time>
+                </div>
+                
+            </header>
+            
+            <div class="page-content">
+                <p><a href="https://en.wikipedia.org/wiki/Brotli">Brotli</a> is a compression format introduced by Google some time ago that is really excellent at compressing text. Brotli is widely supported across the web and has been supported on all of Apple&rsquo;s platforms since 2017. A lot of the web traffic you receive is probably brotli compressed, but many of the iOS developers I talk to have never heard of it.</p>
+<p>Brotli decompression happens automatically when fetching things from the network using <code>NSURLSession</code>, just as it does with gzip. If you were motivated to manually decompress brotli data you could import the Compression framework and write some C code using <code>compression_decode_buffer</code> to do it, but that&rsquo;s not super approachable. It turns out there&rsquo;s a simpler way: <code>NSData</code> actually has a hidden enum value that does brotli decompression for you!</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-objc" data-lang="objc"><span style="display:flex;"><span>NSData <span style="color:#f92672">*</span>decompressedData <span style="color:#f92672">=</span> [brotliData decompressedDataUsingAlgorithm:NSDataCompressionAlgorithmZlib <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span> error:nil];
+</span></span></code></pre></div><p>I <a href="https://mastodon.social/@timonus/109634546423390529">discovered this</a> in 2023 and have taken advantage of it the reduce the size of bundled assets in many of my apps. Here are some examples:</p>
+<p>
+  <figure>
+    <img src="brotli-ios-chart1.jpeg" alt="">
+    <figcaption>Opener&#39;s rule set JSON file. Original  size: 168 KB.</figcaption>
+  </figure>
+</p>
+<p>
+  <figure>
+    <img src="brotli-ios-chart2.jpeg" alt="">
+    <figcaption>Opener&#39;s en localized strings. Original size: 13 KB</figcaption>
+  </figure>
+</p>
+<p>I care deeply about conserving storage on my users&rsquo; devices, and this has become an excellent tool to use for reducing app size.</p>
+<p>You can install brotli from homebrew and use it to compress files with ease! I often do this as a build step that applies only to release builds so that I can continue using the original files while debugging the app.</p>
+<p>If you&rsquo;d ever like to compress to brotli within an app, the Compression framework has a method for doing so using <a href="https://developer.apple.com/documentation/compression/compression_brotli"><code>COMPRESSION_BROTLI</code></a> at level 2. If you&rsquo;d ever like to compress to brotli yourself using level 11 (the highest) there are several open source iOS projects for it. I forked a popular one <a href="https://github.com/timonus/Brotli">here</a> and have been using it.</p>
+<p>I plan to reference this in future posts about more aggressive app shrinkage ideas in the future. Happy compressing!</p>
+
+            </div>
+        </article></main>
 </div>
 <footer class="footer">
     <span class="footer_item"> </span>
