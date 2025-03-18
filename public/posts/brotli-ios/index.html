@@ -10,10 +10,10 @@
 <meta name="application-name" content="Wielding Brotli on iOS | Objectionable-C" />
 <meta property="og:site_name" content="" />
 
-<meta name="description" content="Make your app smaller by compressing bundled assets">
-<meta itemprop="description" content="Make your app smaller by compressing bundled assets" />
-<meta property="og:description" content="Make your app smaller by compressing bundled assets" />
-<meta name="twitter:description" content="Make your app smaller by compressing bundled assets" />
+<meta name="description" content="">
+<meta itemprop="description" content="" />
+<meta property="og:description" content="" />
+<meta name="twitter:description" content="" />
 
 <meta property="og:locale" content="en-us" />
 <meta name="language" content="en-us" />
@@ -52,8 +52,8 @@
         "name": ""
         },
         "datePublished": "2025-03-18",
-        "description": "Make your app smaller by compressing bundled assets",
-        "wordCount":  324 ,
+        "description": "",
+        "wordCount":  335 ,
         "mainEntityOfPage": "True",
         "dateModified": "2025-03-18",
         "image": {
@@ -74,7 +74,8 @@
     <meta property="og:url" content="https://example.org/posts/brotli-ios/">
   <meta property="og:site_name" content="Objectionable-C">
   <meta property="og:title" content="Wielding Brotli on iOS">
-  <meta property="og:description" content="Make your app smaller by compressing bundled assets">
+  <meta property="og:description" content="Brotli is a compression format introduced by Google some time ago that is really excellent at compressing text. Brotli is widely supported across the web and has been supported on all of Apple’s platforms since 2017. A lot of the web traffic you receive is probably brotli compressed, but many of the iOS developers I talk to have never heard of it.
+Brotli decompression happens automatically when fetching things from the network using NSURLSession, just as it does with gzip. If you were motivated to manually decompress brotli data you could import the Compression framework and write some C code using compression_decode_buffer to do it, but that’s not super approachable. It turns out there’s a simpler way: NSData actually has a hidden enum value that does brotli decompression for you!">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -86,7 +87,8 @@
     
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Wielding Brotli on iOS">
-  <meta name="twitter:description" content="Make your app smaller by compressing bundled assets">
+  <meta name="twitter:description" content="Brotli is a compression format introduced by Google some time ago that is really excellent at compressing text. Brotli is widely supported across the web and has been supported on all of Apple’s platforms since 2017. A lot of the web traffic you receive is probably brotli compressed, but many of the iOS developers I talk to have never heard of it.
+Brotli decompression happens automatically when fetching things from the network using NSURLSession, just as it does with gzip. If you were motivated to manually decompress brotli data you could import the Compression framework and write some C code using compression_decode_buffer to do it, but that’s not super approachable. It turns out there’s a simpler way: NSData actually has a hidden enum value that does brotli decompression for you!">
 
 
     
@@ -178,7 +180,10 @@ stroke-linejoin="round" class="feather feather-home">
     <main class="page-content" aria-label="Content">
         <article>
             <header class="header">
-                <h1 class="header-title">Wielding Brotli on iOS</h1>
+                <h1 class="header-title" style="margin: 0; padding: 0; line-height: 0.8;">Wielding Brotli on iOS</h1>
+                
+                <h3 class="subtitle" style="margin: 0; padding: 0;">Make your app smaller by compressing bundled assets</h3>
+                
                 
                 
                 
@@ -205,7 +210,7 @@ stroke-linejoin="round" class="feather feather-home">
     <figcaption>Opener&#39;s en localized strings. Original size: 13 KB</figcaption>
   </figure>
 </p>
-<p>I care deeply about conserving storage on my users&rsquo; devices, and this has become an excellent tool to use for reducing app size.</p>
+<p>I care deeply about conserving storage on my users&rsquo; devices, and this has become an excellent tool to use for reducing app size. Hopefully Apple makes this enum value public in the future! (FB16918276)</p>
 <p>You can install brotli from homebrew and use it to compress files with ease! I often do this as a build step that applies only to release builds so that I can continue using the original files while debugging the app.</p>
 <p>If you&rsquo;d ever like to compress to brotli within an app, the Compression framework has a method for doing so using <a href="https://developer.apple.com/documentation/compression/compression_brotli"><code>COMPRESSION_BROTLI</code></a> at level 2. If you&rsquo;d ever like to compress to brotli yourself using level 11 (the highest) there are several open source iOS projects for it. I forked a popular one <a href="https://github.com/timonus/Brotli">here</a> and have been using it.</p>
 <p>I plan to reference this in future posts about more aggressive app shrinkage ideas in the future. Happy compressing!</p>
