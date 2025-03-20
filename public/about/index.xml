@@ -4,7 +4,8 @@
     <title>About this site on Objectionable-C</title>
     <link>https://example.org/about/</link>
     <description>Recent content in About this site on Objectionable-C</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://example.org/about/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="https://example.org/about/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
