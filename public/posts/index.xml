@@ -6,12 +6,12 @@
     <description>Recent content in Posts on Objectionable-C</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 19 Mar 2025 05:00:00 -0700</lastBuildDate>
+    <lastBuildDate>Fri, 21 Mar 2025 06:00:00 -0700</lastBuildDate>
     <atom:link href="https://example.org/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The case for launch xibs</title>
       <link>https://example.org/posts/launch-xib-size/</link>
-      <pubDate>Wed, 19 Mar 2025 05:00:00 -0700</pubDate>
+      <pubDate>Fri, 21 Mar 2025 06:00:00 -0700</pubDate>
       <guid>https://example.org/posts/launch-xib-size/</guid>
       <description>&lt;p&gt;I&amp;rsquo;m obsessed with keeping apps small, and I recently found an unlikely place to save a couple KB: launch screens. The default on iOS for a while has been to create a launch storyboard for your app, but launch storyboards are bundles that wrap a few files.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  &lt;figure&gt;&#xA;    &lt;img src=&#34;innards.jpeg&#34; alt=&#34;&#34;&gt;&#xA;    &lt;figcaption&gt;The innards of a compiled storyboard&lt;/figcaption&gt;&#xA;  &lt;/figure&gt;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;Many launch storyboards don&amp;rsquo;t use any functionality that isn&amp;rsquo;t also available in the simpler, older xib format. I copied and pasted the launch screens from within the .storyboard into a freshly made .xib and the results saved 1.2 KB.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  &lt;figure&gt;&#xA;    &lt;img src=&#34;new-xib.jpeg&#34; alt=&#34;&#34;&gt;&#xA;    &lt;figcaption&gt;Make a new empty xib file with the same filename as your storyboard&lt;/figcaption&gt;&#xA;  &lt;/figure&gt;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  &lt;figure&gt;&#xA;    &lt;img src=&#34;copy-paste.jpeg&#34; alt=&#34;&#34;&gt;&#xA;    &lt;figcaption&gt;Copypasta&lt;/figcaption&gt;&#xA;  &lt;/figure&gt;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  &lt;img src=&#34;delete-old.jpeg&#34; alt=&#34;&#34;&gt;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  &lt;figure&gt;&#xA;    &lt;img src=&#34;compare.jpeg&#34; alt=&#34;&#34;&gt;&#xA;    &lt;figcaption&gt;Resulting file size savings&lt;/figcaption&gt;&#xA;  &lt;/figure&gt;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;It&amp;rsquo;s just a couple KB, but in apps that are &amp;lt;2 MB like &lt;a href=&#34;https://apps.apple.com/app/id989565871&#34;&gt;Opener&lt;/a&gt; every KB counts!&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  &lt;img src=&#34;freerealestate.jpeg&#34; alt=&#34;&#34;&gt;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;You could save even more space by using the relatively new &lt;a href=&#34;https://sarunw.com/posts/launch-screen-using-plist/&#34;&gt;&lt;code&gt;UILaunchScreen&lt;/code&gt; info.plist key&lt;/a&gt;, but that lacks some of the customizability of launch storyboards/xibs.&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;Side note: Opener has two launch screens, one for iPhone and one for iPad, so this savings is doubled&lt;/em&gt;&lt;/p&gt;&#xA;</description>
     </item>
