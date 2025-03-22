@@ -25,3 +25,5 @@ You can install brotli from homebrew and use it to compress files with ease! I o
 If you'd ever like to compress to brotli within an app, the Compression framework has a method for doing so using [`COMPRESSION_BROTLI`](https://developer.apple.com/documentation/compression/compression_brotli) at level 2. If you'd ever like to compress to brotli yourself using level 11 (the highest) there are several open source iOS projects for it. I forked a popular one [here](https://github.com/timonus/Brotli) and have been using it.
 
 I plan to reference this in future posts about more aggressive app shrinkage ideas in the future. Happy compressing!
+
+*Update: Here's [an example](https://github.com/lonepalm/Elegant-Emoji-Picker/commit/0a852f91c46c86e5c7f002a71bc244a5432ae0e1) of where we're using this to save some space in [Retro](https://retro.app).*
