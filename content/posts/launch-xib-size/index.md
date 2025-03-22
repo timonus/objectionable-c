@@ -16,6 +16,8 @@ Many launch storyboards don't use any functionality that isn't also available in
 
 ![](delete-old.jpeg)
 
+![](trim.gif "Remove the launch screen file extension from your info.plist if there is one")
+
 ![](compare.jpeg "Resulting file size savings")
 
 It's just a couple KB, but in apps that are <2 MB like [Opener](https://apps.apple.com/app/id989565871) every KB counts!
