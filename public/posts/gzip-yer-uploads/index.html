@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en-us"><head><meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title itemprop="name">gzip yer uploads | Objectionable-C</title>
+<meta property="og:title" content="gzip yer uploads | Objectionable-C" />
+<meta name="twitter:title" content="gzip yer uploads | Objectionable-C" />
+<meta itemprop="name" content="gzip yer uploads | Objectionable-C" />
+<meta name="application-name" content="gzip yer uploads | Objectionable-C" />
+<meta property="og:site_name" content="" />
+
+<meta name="description" content="">
+<meta itemprop="description" content="" />
+<meta property="og:description" content="" />
+<meta name="twitter:description" content="" />
+
+<meta property="og:locale" content="en-us" />
+<meta name="language" content="en-us" />
+
+  <link rel="alternate" hreflang="en" href="https://example.org/posts/gzip-yer-uploads/" title="" />
+
+
+
+
+
+    
+    
+    
+
+    <meta property="og:type" content="article" />
+    <meta property="og:article:published_time" content=2025-03-24T06:00:00-0700 />
+    <meta property="article:published_time" content=2025-03-24T06:00:00-0700 />
+    <meta property="og:url" content="https://example.org/posts/gzip-yer-uploads/" />
+
+    
+    <meta property="og:article:author" content="Tim Johnsen" />
+    <meta property="article:author" content="Tim Johnsen" />
+    <meta name="author" content="Tim Johnsen" />
+    
+    
+
+    
+
+    <script defer type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "Article",
+        "headline": "gzip yer uploads",
+        "author": {
+        "@type": "Person",
+        "name": ""
+        },
+        "datePublished": "2025-03-24",
+        "description": "",
+        "wordCount":  388 ,
+        "mainEntityOfPage": "True",
+        "dateModified": "2025-03-24",
+        "image": {
+        "@type": "imageObject",
+        "url": ""
+        },
+        "publisher": {
+        "@type": "Organization",
+        "name": "Objectionable-C"
+        }
+    }
+    </script>
+
+
+<meta name="generator" content="Hugo 0.143.1">
+
+    
+    <meta property="og:url" content="https://example.org/posts/gzip-yer-uploads/">
+  <meta property="og:site_name" content="Objectionable-C">
+  <meta property="og:title" content="gzip yer uploads">
+  <meta property="og:description" content="NSURLSession opaquely handles HTTP negotiations about accepting compressed content and does the decompression (using formats like gzip and brotli) before you receive responses, which is great. Foundation, Apple’s OSes, and the web are doing work that we as developers don’t have to so our users consume less data and have a faster, less data-consuming experience. Hooray! I’ve always been impressed that this happens pretty much auto-magically without having to think about it.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-03-24T06:00:00-07:00">
+    <meta property="article:modified_time" content="2025-03-24T06:00:00-07:00">
+
+
+    
+    
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="gzip yer uploads">
+  <meta name="twitter:description" content="NSURLSession opaquely handles HTTP negotiations about accepting compressed content and does the decompression (using formats like gzip and brotli) before you receive responses, which is great. Foundation, Apple’s OSes, and the web are doing work that we as developers don’t have to so our users consume less data and have a faster, less data-consuming experience. Hooray! I’ve always been impressed that this happens pretty much auto-magically without having to think about it.">
+
+
+    
+
+    <link rel="canonical" href="https://example.org/posts/gzip-yer-uploads/">
+    <link href="/style.min.e390ba7da26222f4dc42a349955d76dbbe44e5ce2535a43de5a70633a0a9ec3c.css" rel="stylesheet">
+    <link href="/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
+
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+
+
+
+<link rel="manifest" href="https://example.org/site.webmanifest">
+
+<meta name="msapplication-config" content="/browserconfig.xml">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="theme-color" content="#434648">
+
+    
+    <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg">
+
+    
+    
+    
+</head>
+<body data-theme = "" class="notransition">
+
+<script src="/js/theme.min.8961c317c5b88b953fe27525839672c9343f1058ab044696ca225656c8ba2ab0.js" integrity="sha256-iWHDF8W4i5U/4nUlg5ZyyTQ/EFirBEaWyiJWVsi6KrA="></script>
+
+<div class="navbar" role="navigation">
+    <nav class="menu" aria-label="Main Navigation">
+        <a href="https://example.org/" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" 
+viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+stroke-linejoin="round" class="feather feather-home">
+<title></title>
+<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+<polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg>
+        </a>
+        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+        <label for="menu-trigger">
+            <span class="menu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" stroke="currentColor" fill="none" viewBox="0 0 14 14"><title>Menu</title><path stroke-linecap="round" stroke-linejoin="round" d="M10.595 7L3.40726 7"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 3.51488L3.49301 3.51488"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 10.4851H3.49301"></path><path stroke-linecap="round" stroke-linejoin="round" d="M0.5 12.5V1.5C0.5 0.947715 0.947715 0.5 1.5 0.5H12.5C13.0523 0.5 13.5 0.947715 13.5 1.5V12.5C13.5 13.0523 13.0523 13.5 12.5 13.5H1.5C0.947715 13.5 0.5 13.0523 0.5 12.5Z"></path></svg>
+            </span>
+        </label>
+
+        <div class="trigger">
+            <ul class="trigger-container">
+                
+                
+                <li>
+                    <a class="menu-link " href="/posts/">
+                        Posts
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/about/">
+                        About
+                    </a>
+                    
+                </li>
+                
+                <li class="menu-separator">
+                    <span>|</span>
+                </li>
+                
+                
+            </ul>
+            <a id="mode" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-sunny" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>LIGHT</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-moon" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>DARK</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+            </a>
+        </div>
+    </nav>
+</div>
+
+<div class="wrapper post">
+    <main class="page-content" aria-label="Content">
+        <article>
+            <header class="header">
+                <h1 class="header-title" style="margin: 0; padding: 0; line-height: 0.8;">gzip yer uploads</h1>
+                
+                <h3 class="subtitle" style="margin: 0; padding: 0;">Compression is a two-way street</h3>
+                
+                
+                
+                
+                <div class="post-meta">
+                    <time datetime="2025-03-24T06:00:00-07:00" itemprop="datePublished"> Mar 24, 2025 </time>
+                </div>
+                
+            </header>
+            
+            <div class="page-content">
+                <p><code>NSURLSession</code> opaquely handles HTTP negotiations about accepting compressed content and does the decompression (using formats like gzip and <a href="/posts/brotli-ios">brotli</a>) before you receive responses, which is great. <code>Foundation</code>, Apple&rsquo;s OSes, and the web are doing work that we as developers don&rsquo;t have to so our users consume less data and have a faster, less data-consuming experience. Hooray! I&rsquo;ve always been impressed that this happens pretty much auto-magically without having to think about it.</p>
+<p>However, I had a thought late in 2024 about transmitting data the other way: uploads. While looking I realized there&rsquo;s not automatic upload compression built into <code>NSURLSession</code>. I&rsquo;m sure there are good reasons for this, but I figured that some of the APIs I was using could accept compressed uploads. It turns out I was right, <a href="https://developer.mixpanel.com/reference/import-events">Mixpanel</a> and Dropbox both accept compressed data.</p>
+<p>Here&rsquo;s how I&rsquo;m doing the compression itself</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-objc" data-lang="objc"><span style="display:flex;"><span><span style="color:#75715e">#import &lt;zlib.h&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Function that gzips data
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// Thanks Claude https://tijo.link/BGdVNx
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">static</span> NSData <span style="color:#f92672">*</span><span style="color:#a6e22e">_gzipCompressData</span>(NSData <span style="color:#f92672">*</span><span style="color:#66d9ef">const</span> data, NSError <span style="color:#f92672">**</span>error) {
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>data.length) {
+</span></span><span style="display:flex;"><span>       <span style="color:#66d9ef">if</span> (error) {
+</span></span><span style="display:flex;"><span>           <span style="color:#f92672">*</span>error <span style="color:#f92672">=</span> [NSError errorWithDomain:<span style="color:#e6db74">@&#34;CompressionErrorDomain&#34;</span> code:<span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>               userInfo:<span style="color:#ae81ff">@{</span>NSLocalizedDescriptionKey: <span style="color:#e6db74">@&#34;Invalid input data&#34;</span><span style="color:#ae81ff">}</span>];
+</span></span><span style="display:flex;"><span>       }
+</span></span><span style="display:flex;"><span>       <span style="color:#66d9ef">return</span> nil;
+</span></span><span style="display:flex;"><span>   }
+</span></span><span style="display:flex;"><span>   
+</span></span><span style="display:flex;"><span>   z_stream strm;
+</span></span><span style="display:flex;"><span>   strm.zalloc <span style="color:#f92672">=</span> Z_NULL;
+</span></span><span style="display:flex;"><span>   strm.zfree <span style="color:#f92672">=</span> Z_NULL;
+</span></span><span style="display:flex;"><span>   strm.opaque <span style="color:#f92672">=</span> Z_NULL;
+</span></span><span style="display:flex;"><span>   
+</span></span><span style="display:flex;"><span>   <span style="color:#75715e">// Initialize deflate with gzip format
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>   <span style="color:#66d9ef">if</span> (deflateInit2(<span style="color:#f92672">&amp;</span>strm, Z_DEFAULT_COMPRESSION, Z_DEFLATED, <span style="color:#ae81ff">15</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">16</span>, <span style="color:#ae81ff">8</span>, Z_DEFAULT_STRATEGY) <span style="color:#f92672">!=</span> Z_OK) {
+</span></span><span style="display:flex;"><span>       <span style="color:#66d9ef">if</span> (error) {
+</span></span><span style="display:flex;"><span>           <span style="color:#f92672">*</span>error <span style="color:#f92672">=</span> [NSError errorWithDomain:<span style="color:#e6db74">@&#34;CompressionErrorDomain&#34;</span> code:<span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>               userInfo:<span style="color:#ae81ff">@{</span>NSLocalizedDescriptionKey: <span style="color:#e6db74">@&#34;Failed to initialize compression&#34;</span><span style="color:#ae81ff">}</span>];
+</span></span><span style="display:flex;"><span>       }
+</span></span><span style="display:flex;"><span>       <span style="color:#66d9ef">return</span> nil;
+</span></span><span style="display:flex;"><span>   }
+</span></span><span style="display:flex;"><span>   
+</span></span><span style="display:flex;"><span>   <span style="color:#75715e">// Set up input
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>   strm.avail_in <span style="color:#f92672">=</span> (uInt)data.length;
+</span></span><span style="display:flex;"><span>   strm.next_in <span style="color:#f92672">=</span> (Bytef <span style="color:#f92672">*</span>)data.bytes;
+</span></span><span style="display:flex;"><span>   
+</span></span><span style="display:flex;"><span>   <span style="color:#75715e">// Prepare output buffer (compress can increase size)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>   NSMutableData <span style="color:#f92672">*</span>compressedData <span style="color:#f92672">=</span> [NSMutableData dataWithLength:data.length <span style="color:#f92672">*</span> <span style="color:#ae81ff">1.1</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">12</span>];
+</span></span><span style="display:flex;"><span>   strm.avail_out <span style="color:#f92672">=</span> (uInt)compressedData.length;
+</span></span><span style="display:flex;"><span>   strm.next_out <span style="color:#f92672">=</span> compressedData.mutableBytes;
+</span></span><span style="display:flex;"><span>   
+</span></span><span style="display:flex;"><span>   <span style="color:#75715e">// Compress
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>   <span style="color:#66d9ef">if</span> (deflate(<span style="color:#f92672">&amp;</span>strm, Z_FINISH) <span style="color:#f92672">!=</span> Z_STREAM_END) {
+</span></span><span style="display:flex;"><span>       deflateEnd(<span style="color:#f92672">&amp;</span>strm);
+</span></span><span style="display:flex;"><span>       <span style="color:#66d9ef">if</span> (error) {
+</span></span><span style="display:flex;"><span>           <span style="color:#f92672">*</span>error <span style="color:#f92672">=</span> [NSError errorWithDomain:<span style="color:#e6db74">@&#34;CompressionErrorDomain&#34;</span> code:<span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span>               userInfo:<span style="color:#ae81ff">@{</span>NSLocalizedDescriptionKey: <span style="color:#e6db74">@&#34;Compression failed&#34;</span><span style="color:#ae81ff">}</span>];
+</span></span><span style="display:flex;"><span>       }
+</span></span><span style="display:flex;"><span>       <span style="color:#66d9ef">return</span> nil;
+</span></span><span style="display:flex;"><span>   }
+</span></span><span style="display:flex;"><span>   
+</span></span><span style="display:flex;"><span>   <span style="color:#75715e">// Cleanup and finalize
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>   [compressedData setLength:strm.total_out];
+</span></span><span style="display:flex;"><span>   deflateEnd(<span style="color:#f92672">&amp;</span>strm);
+</span></span><span style="display:flex;"><span>   
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">return</span> compressedData;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>(You could also use a library like <a href="https://github.com/nicklockwood/GZIP">this one</a> if you don&rsquo;t want to hand write the compression.)</p>
+<p>Then, if using a data task:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-objc" data-lang="objc"><span style="display:flex;"><span>NSData <span style="color:#f92672">*</span>compressedData <span style="color:#f92672">=</span> _gzipCompressData(originalData, <span style="color:#f92672">&amp;</span>err);
+</span></span><span style="display:flex;"><span>NSURLRequest <span style="color:#f92672">*</span>request <span style="color:#f92672">=</span> ...;
+</span></span><span style="display:flex;"><span>[request setValue:<span style="color:#e6db74">@&#34;gzip&#34;</span> forHTTPHeaderField:<span style="color:#e6db74">@&#34;Content-Encoding&#34;</span>];
+</span></span><span style="display:flex;"><span>[request setHTTPBody:compressedData];
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Start a data task using request and an NSURLSession
+</span></span></span></code></pre></div><p>or an upload task:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-objc" data-lang="objc"><span style="display:flex;"><span>NSData <span style="color:#f92672">*</span>compressedData <span style="color:#f92672">=</span> _gzipCompressData(originalData, <span style="color:#f92672">&amp;</span>err);
+</span></span><span style="display:flex;"><span>NSURLRequest <span style="color:#f92672">*</span>request <span style="color:#f92672">=</span> ...;
+</span></span><span style="display:flex;"><span>[request setValue:<span style="color:#e6db74">@&#34;gzip&#34;</span> forHTTPHeaderField:<span style="color:#e6db74">@&#34;Content-Encoding&#34;</span>];
+</span></span><span style="display:flex;"><span>[urlSession uploadTaskWithRequest:request fromData:compressedData];
+</span></span></code></pre></div><p>With this you can shave a few percent off your upload sizes saving bandwidth and time!</p>
+<p><em>Here are examples where I&rsquo;m doing this in <a href="https://github.com/timonus/TJMixpanelLogger/blob/b0ba0e704c11a97410a459f7b31d705caa335c6e/TJMixpanelLogger.m#L314-L323"><code>TJMixpanelLogger</code></a> and <a href="https://github.com/timonus/TJDropbox/blob/a35deac894646d5468ac06c645a8451c680d5962/TJDropbox/TJDropbox.m#L975-L986"><code>TJDropbox</code></a>.</em></p>
+
+            </div>
+        </article></main>
+</div>
+<footer class="footer">
+    <span class="footer_item"> </span>
+    &nbsp;
+
+    <div class="footer_social-icons">
+<a href="https://mastodon.social/@timonus" target="_blank" rel="noopener noreferrer me"
+    title="Mastodon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M21.58 13.913c-.29 1.469-2.592 3.121-5.238 3.396-1.379.184-2.737.368-4.185.276-2.368-.092-4.237-.551-4.237-.551 0 .184.014.459.043.643.308 2.294 2.317 2.478 4.22 2.57 1.922 0 3.633-.46 3.633-.46l.079 1.653s-1.344.734-3.738.918c-1.32.091-2.96-.092-4.869-.551-4.14-1.102-4.853-5.507-4.961-10.005-.034-1.285-.013-2.57-.013-3.58 0-4.589 3-5.966 3-5.966 1.513-.734 4.11-1.01 6.808-1.01h.067c2.699 0 5.296.276 6.81 1.01 0 0 3 1.377 3 5.967 0 0 .037 3.304-.419 5.69"
+        stroke="currentColor" />
+    <path
+        d="M17.832 8.633v5h-1.978V8.78c0-1.023-.43-1.542-1.29-1.542-.95 0-1.427.616-1.427 1.834v2.655H11.17V9.072c0-1.218-.476-1.834-1.427-1.834-.86 0-1.29.52-1.29 1.542v4.852H6.475V8.633c0-1.022.26-1.834.782-2.434.538-.6 1.243-.909 2.118-.909 1.012 0 1.779.39 2.286 1.169l.492.827.493-.827c.507-.78 1.274-1.169 2.286-1.169.875 0 1.58.308 2.118.909.522.6.782 1.412.782 2.434"
+        fill="currentColor" stroke="none" />
+</svg>
+</a>
+<a href="https://github.com/timonus" target="_blank" rel="noopener noreferrer me"
+    title="Github">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+    </path>
+</svg>
+</a>
+<a href="/index.xml" target="_blank" rel="noopener noreferrer me"
+    title="Rss">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 11a9 9 0 0 1 9 9" />
+    <path d="M4 4a16 16 0 0 1 16 16" />
+    <circle cx="5" cy="19" r="1" />
+</svg>
+</a>
+</div>
+    <small class="footer_copyright">
+        © 2025 Tim Johnsen.
+        
+    </small>
+</footer>
+
+
+
+
+
+
+
+    
+    <script src="https://example.org/js/main.min.4ee188e1744c19816e95a540b2650ed9f033ea0371e74eac8e717355cfca8741.js" integrity="sha256-TuGI4XRMGYFulaVAsmUO2fAz6gNx506sjnFzVc/Kh0E="></script>
+
+    
+
+</body>
+</html>
