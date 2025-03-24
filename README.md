@@ -8,3 +8,5 @@ To run locally, run `hugo server`
 Config happens in hugo.toml
 
 To deploy: run `hugo`, commit changes, and push
+
+Make a new post `hugo new [name-of-post].md`
