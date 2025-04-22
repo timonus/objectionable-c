@@ -51,9 +51,4 @@
     {{ if templates.Exists "partials/custom-head.html" }}
       {{ partial "custom-head.html" . }}
     {{ end }}
-    
-    <!-- Mastodon Author Tag https://tijo.link/4uuSdz -->
-    {{ if .Site.Params.Mastodon }}
-    <meta name="fediverse:creator" content="{{ .Site.Params.mastodon.author }}" />
-    {{ end }}
 </head>
