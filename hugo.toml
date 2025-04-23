@@ -9,6 +9,7 @@ theme = 'theme'
   intro = "Objectionable-C"
   name = "Tim Johnsen"
   description = "Musings on iOS development"
+  fediverseAccount = "@timonus@mastodon.social"
 
 [outputs]
   home = ["HTML", "RSS"]
