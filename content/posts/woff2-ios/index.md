@@ -1,6 +1,6 @@
 +++
 date = '2025-04-30T05:00:00-07:00'
-title = 'Save space by using compact fonts'
+title = 'Save space using compact fonts'
 +++
 
 *Disclaimer: I'm not a font expert. The strategy pitched in this post may have drawbacks I haven't yet discovered.*
