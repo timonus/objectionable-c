@@ -14,3 +14,5 @@ This is the third or fourth rendition of my "blog", here are some of the prior i
 - [Medium](https://medium.com/@timonus)
 - [Tumblr](https://tijoinc.tumblr.com/)
 - [Wordpress](https://tijoinc.wordpress.com/) (eek)
+
+The idea for the name of this blog from [this post](https://mastodon.social/@chockenberry/112967635334878771).
