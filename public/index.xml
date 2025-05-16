@@ -8,8 +8,15 @@
     <description>Recent content on Objectionable-C</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 30 Apr 2025 05:00:00 -0700</lastBuildDate>
+    <lastBuildDate>Fri, 16 May 2025 05:00:00 -0700</lastBuildDate>
     <atom:link href="https://objectionable-c.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>No-nonsense UISceneDelegate migration reference</title>
+      <link>https://objectionable-c.com/posts/uiscenedelegate-migration/</link>
+      <pubDate>Fri, 16 May 2025 05:00:00 -0700</pubDate>
+      <guid>https://objectionable-c.com/posts/uiscenedelegate-migration/</guid>
+      <content:encoded>&lt;p&gt;&#xA;  &lt;img src=&#34;meme.jpg&#34; alt=&#34;&#34;&gt;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;ve avoided migrating to using the &lt;code&gt;UIScene&lt;/code&gt;-based application lifecycle since it was announced with iOS 13 because:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;None of my apps support multiple windows (the main reason for &lt;code&gt;UIScene&lt;/code&gt; to exist afaict)&lt;/li&gt;&#xA;&lt;li&gt;I preferred the older, simpler methods of dealing with app events via &lt;code&gt;UIApplicationDelegate&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;I&amp;rsquo;ve also seen numerous apps break in weird ways due to differences in behavior between &lt;code&gt;UIApplicationDelegate&lt;/code&gt; and &lt;code&gt;UISceneDelegate&lt;/code&gt;. Most notably, several events that get their own methods in &lt;code&gt;UISceneDelegate&lt;/code&gt; are handled completely differently on cold start when a scene is being spun up. This often causes &lt;a href=&#34;https://mastodon.social/@timonus/114433444611806352&#34;&gt;URL handling&lt;/a&gt; and shortcut handling to break on cold start. Another common source of issues is that app delegate lifecycle methods (&lt;code&gt;didBecomeActive&lt;/code&gt;/&lt;code&gt;didEnterBackground&lt;/code&gt;/etc.) are no longer called, even though the notifications for those events are still fired 🤔.&lt;/p&gt;&#xA;&lt;p&gt;It seems that &lt;a href=&#34;https://developer.apple.com/documentation/technotes/tn3187-migrating-to-the-uikit-scene-based-life-cycle&#34;&gt;as of iOS 18.4&lt;/a&gt; Apple is starting to force developers towards using the &lt;code&gt;UIScene&lt;/code&gt;-based lifecycle, so I took a stab at porting my apps over.&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;ve created a project named &lt;a href=&#34;https://github.com/timonus/tjscenedelegate&#34;&gt;&lt;code&gt;TJSceneDelegate&lt;/code&gt;&lt;/a&gt; that should more or less acts as a drop in replacement in any app. When installed it forwards all events to &lt;code&gt;UIApplicationDelegate&lt;/code&gt;, the thought is that you should then be able to forget about scenes and use the app delegate callbacks like you used to. At the moment I&amp;rsquo;ve ported all but one of my side projects over to this, and I&amp;rsquo;m going to migrate the final one soon.&lt;/p&gt;&#xA;&lt;p&gt;I hope this can serve as a solution or a reference for others migrating to the &lt;code&gt;UIScene&lt;/code&gt;-based lifecycle.&lt;/p&gt;&#xA;</content:encoded>
+    </item>
     <item>
       <title>Save space using compact fonts</title>
       <link>https://objectionable-c.com/posts/woff2-ios/</link>
