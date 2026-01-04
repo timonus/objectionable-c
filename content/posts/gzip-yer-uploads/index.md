@@ -4,7 +4,7 @@ title = 'gzip yer uploads'
 subtitle = 'Compression is a two-way street'
 +++
 
-`NSURLSession` opaquely handles HTTP negotiations about accepting compressed content and does the decompression (using formats like gzip and [brotli](/posts/brotli-ios)) before you receive responses, which is great. `Foundation`, Apple's OSes, and the web are doing work that we as developers don't have to so our users consume less data and have a faster, less data-consuming experience. Hooray! I've always been impressed that this happens pretty much auto-magically without having to think about it.
+`NSURLSession` opaquely handles HTTP negotiations about accepting compressed content and does the decompression (using formats like gzip and [brotli](/posts/brotli-ios)) before you receive responses, which is great. `Foundation`, Apple's OSes, and the web are doing work that we as developers don't have to so our users consume less data and have a faster experience. Hooray! I've always been impressed that this happens pretty much auto-magically without having to think about it.
 
 However, I had a thought late in 2024 about transmitting data the other way: uploads. While looking I realized there's not automatic upload compression built into `NSURLSession`. I'm sure there are good reasons for this, but I figured that some of the APIs I was using could accept compressed uploads. It turns out I was right, [Mixpanel](https://developer.mixpanel.com/reference/import-events) and Dropbox both accept compressed data.
 
