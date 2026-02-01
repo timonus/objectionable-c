@@ -36,6 +36,7 @@ From there you can enumerate the available files and pick the largest one to sho
         UIImage *const image = [UIImage imageNamed:imageName inBundle:self compatibleWithTraitCollection:nil];
         if (image.size.width > maxWidth) {
             appIconImage = image;
+            maxWidth = image.size.width;
         }
     }
     return appIconImage;
