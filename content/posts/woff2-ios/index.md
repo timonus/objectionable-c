@@ -32,3 +32,7 @@ I also applied this strategy to [the font](https://github.com/RedHatOfficial/Red
 I can't find definitive documentation of when iOS added support for `.woff2`, but it's been supported in Safari [since iOS 10](https://caniuse.com/?search=woff2). This seems like it could be a reasonable proxy for OS support, and I've tested it working as far back as iOS 15.8.4.
 
 If you're looking for places to reduce your app's size and you're using custom fonts, leveraging `.woff2` could be a good way to get some savings!
+
+## May 2026 Update
+
+Apple is [starting to reject](https://mastodon.social/@chadpod/116558693951370273) apps embedding woff2 font claiming they're unsupported. I've tried changing the file extensions of these fonts as a workaround but they were still rejected. Further obfuscation may be required to continue using woff2.
