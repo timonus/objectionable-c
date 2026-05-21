@@ -35,4 +35,4 @@ If you're looking for places to reduce your app's size and you're using custom f
 
 ## May 2026 Update
 
-Apple is [starting to reject](https://mastodon.social/@chadpod/116558693951370273) apps embedding woff2 font claiming they're unsupported. I've tried changing the file extensions of these fonts as a workaround but they were still rejected. Further obfuscation may be required to continue using woff2.
+Apple is [starting to reject](https://mastodon.social/@chadpod/116558693951370273) apps embedding woff2 fonts claiming they're unsupported. They seem to be detecting these fonts by inspecting file contents, not just looking for the file extension, so a simple rename will still result in rejection. woff2 files have a predictable prefix, so you can still embed them by manipulating the contents of the bundled file then changing them back and loading at runtime.

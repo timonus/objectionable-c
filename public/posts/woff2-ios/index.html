@@ -53,7 +53,7 @@
         },
         "datePublished": "2025-04-30",
         "description": "",
-        "wordCount":  360 ,
+        "wordCount":  389 ,
         "mainEntityOfPage": "True",
         "dateModified": "2025-04-30",
         "image": {
@@ -217,7 +217,7 @@ stroke-linejoin="round" class="feather feather-home">
 <p>I can&rsquo;t find definitive documentation of when iOS added support for <code>.woff2</code>, but it&rsquo;s been supported in Safari <a href="https://caniuse.com/?search=woff2">since iOS 10</a>. This seems like it could be a reasonable proxy for OS support, and I&rsquo;ve tested it working as far back as iOS 15.8.4.</p>
 <p>If you&rsquo;re looking for places to reduce your app&rsquo;s size and you&rsquo;re using custom fonts, leveraging <code>.woff2</code> could be a good way to get some savings!</p>
 <h2 id="may-2026-update">May 2026 Update</h2>
-<p>Apple is <a href="https://mastodon.social/@chadpod/116558693951370273">starting to reject</a> apps embedding woff2 font claiming they&rsquo;re unsupported. I&rsquo;ve tried changing the file extensions of these fonts as a workaround but they were still rejected. Further obfuscation may be required to continue using woff2.</p>
+<p>Apple is <a href="https://mastodon.social/@chadpod/116558693951370273">starting to reject</a> apps embedding woff2 fonts claiming they&rsquo;re unsupported. They seem to be detecting these fonts by inspecting file contents, not just looking for the file extension, so a simple rename will still result in rejection. woff2 files have a predictable prefix, so you can still embed them by manipulating the contents of the bundled file then changing them back and loading at runtime.</p>
 
             </div>
         </article></main>
