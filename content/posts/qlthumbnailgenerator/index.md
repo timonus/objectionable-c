@@ -21,3 +21,7 @@ Per the docs ([here](https://developer.apple.com/documentation/quicklookthumbnai
 ![](after.jpeg "After, comfortably under the memory limit")
 
 If you’re working in a memory constrained environment like widgets or extensions on iOS I highly recommend checking this out.
+
+## July 2026 Update
+
+[Paul Haddad](https://tapbots.social/@paul) reached out to me about using this API. Apparently there's an undocumented upper limit on the size of thumbnails you can request from QuickLook of around 3.5 MP. If you request a thumbnail that's too large you'll get something an error `QLThumbnailErrorDomain` with code `0` and underlying error code `102`. 3.5 MP is plenty for a widget, but might not work for other cases, something to bear in mind!
