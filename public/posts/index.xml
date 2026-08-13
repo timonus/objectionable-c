@@ -8,8 +8,15 @@
     <description>Recent content in Posts on Objectionable-C</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 30 Jan 2026 19:00:00 -0800</lastBuildDate>
+    <lastBuildDate>Thu, 13 Aug 2026 08:00:00 -0800</lastBuildDate>
     <atom:link href="https://objectionable-c.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ask not what Siri can do for you</title>
+      <link>https://objectionable-c.com/posts/maybe-dont-ask-siri/</link>
+      <pubDate>Thu, 13 Aug 2026 08:00:00 -0800</pubDate>
+      <guid>https://objectionable-c.com/posts/maybe-dont-ask-siri/</guid>
+      <content:encoded>&lt;p&gt;iOS 27 introduces Siri AI, and Apple&amp;rsquo;s really excited about it. So excited that your app can get new &amp;ldquo;Ask Siri&amp;rdquo; options in &lt;code&gt;UIMenu&lt;/code&gt;s with no apparent opt out.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  &lt;img src=&#34;1.jpeg&#34; alt=&#34;&#34;&gt;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;It seems like the OS is using some heuristics for choosing when to show this and when not to. I see it in some places in my apps, and not in others.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  &lt;img src=&#34;slide.jpeg&#34; alt=&#34;&#34;&gt;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;Kind of odd that there&amp;rsquo;s not an official way to opt out of these, so I did some digging to find if there&amp;rsquo;s some way to omit them.&lt;/p&gt;&#xA;&lt;p&gt;I discovered that these &lt;code&gt;UIAction&lt;/code&gt;s are a bit odd, they lack a title and have a transient identifier.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  &lt;img src=&#34;action.jpeg&#34; alt=&#34;&#34;&gt;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;However, they are all created using the &lt;code&gt;+_intelligentAssistantActionWithIdentifier:configuration:&lt;/code&gt; class method on &lt;code&gt;UIAction&lt;/code&gt;.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  &lt;img src=&#34;bt.jpeg&#34; alt=&#34;&#34;&gt;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;The injection of these happens via a C function &lt;em&gt;after&lt;/em&gt; you&amp;rsquo;ve been queried for your menu items, so the best way I&amp;rsquo;ve found thus far to omit them is by swizzling &lt;code&gt;+_intelligentAssistantActionWithIdentifier:configuration:&lt;/code&gt; to return &lt;code&gt;nil&lt;/code&gt; or to hide it using &lt;code&gt;UIMenuElementAttributesHidden&lt;/code&gt;.&lt;/p&gt;&#xA;&lt;p&gt;&#xA;  &lt;img src=&#34;swizzlers.jpeg&#34; alt=&#34;&#34;&gt;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;Of course swizzling private methods should be done cautiously, but if you feel inclined this is a way to omit those &amp;ldquo;Ask Siri&amp;rdquo; entries!&lt;/p&gt;&#xA;</content:encoded>
+    </item>
     <item>
       <title>Iconic loading</title>
       <link>https://objectionable-c.com/posts/iconic-loading/</link>
