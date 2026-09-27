@@ -40,4 +40,4 @@ If you're looking to store a bit of extra info in `PHAsset`s this could be a gre
 
 # 2026 Update
 
-iOS 27 introduces a higher-level way to fetch `originalFilename`: [`PHAsset.extendedMetadata. originalFilename`](https://developer.apple.com/documentation/photos/phassetextendedmetadata/originalfilename?language=objc). Much nicer than fetching/enumerating `PHAssetResource`s!
+iOS 27 introduces a higher-level way to fetch `originalFilename`: [`PHAsset.extendedMetadata.originalFilename`](https://developer.apple.com/documentation/photos/phassetextendedmetadata/originalfilename?language=objc). Much nicer than fetching/enumerating `PHAssetResource`s!
