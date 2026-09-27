@@ -37,3 +37,7 @@ Here's how I'm leveraging this:
 ![](examples.jpg)
 
 If you're looking to store a bit of extra info in `PHAsset`s this could be a great way to do it!
+
+# 2026 Update
+
+iOS 27 introduces a higher-level way to fetch `originalFilename`: [`PHAsset.extendedMetadata. originalFilename`](https://developer.apple.com/documentation/photos/phassetextendedmetadata/originalfilename?language=objc). Much nicer than fetching/enumerating `PHAssetResource`s!
